@@ -34,5 +34,18 @@ function switchLamp_alt(lampId, turnOn) {
         divs[0].classList.remove('d-none');
         divs[1].classList.add('d-none');
     }
+    if(turnOn){
+
+    }
+}
+function switchLamp_alt2(lampId) {
+    const container = document.getElementById(lampId);
+    const divOff = container.children[0];
+    const divOn  = container.children[1];
+    
+    // Scambia la visibilità
+    divOff.classList.toggle('d-none');
+    divOn.classList.toggle('d-none');
+
 }
 
