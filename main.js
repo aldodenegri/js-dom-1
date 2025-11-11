@@ -1,6 +1,6 @@
 function switchLamp(lampId) {
     const lamp = document.getElementById(lampId);
-
+    //quer
     const currentImg = lamp.querySelector('img').src;
 
     if (currentImg.includes('white_lamp.png')) {
@@ -47,5 +47,21 @@ function switchLamp_alt2(lampId) {
     divOff.classList.toggle('d-none');
     divOn.classList.toggle('d-none');
 
+}
+function switchLamp_alt3(lampId) {
+    const lamp = document.getElementById(lampId);
+    const img = lamp.querySelector('img');      
+    const button = document.getElementById('on/off'); 
+    // const button = lamp.querySelector('input[type="button"]');
+
+    if (img.src.includes('white_lamp.png')) {
+        img.src = "img/yellow_lamp.png";
+        img.alt = "onLamp";
+        button.value = "Turn Off";
+    } else {
+        img.src = "img/white_lamp.png";
+        img.alt = "offLamp";
+        button.value = "Turn On";
+    }
 }
 
